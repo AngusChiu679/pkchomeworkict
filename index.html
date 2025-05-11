@@ -1,189 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>PKC Homework</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-    <style>
-        .box {
-            width: 700px;
-            height: auto; 
-            background-color: white;
-            border: 2px solid black;
-            padding: 10px;
-            margin: 10px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel ="script" href = "script.js"
+</head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is the first HTML project I'm doing for school</p>
-    <h2>Basic HTML tags:</h2>
-    <h3>Headings (&lt;h1&gt;-&lt;h6&gt;)</h3>
-    <ul>
-        <li>Headings are used to define titles and subtitles on a webpage.
-        </li>
-        <li>
-            &lt;h1&gt; is the largest and &lt;h6&gt; is the smallest.
-        </li>
-    </ul>
-    <div class="box">
-        &lt;h1&gt;Main Title&lt;/h1&gt;<br>
-        &lt;h2&gt;Subheading&lt;/h2&gt;<br>
-        &lt;h3&gt;Smaller Subheading&lt;/h3&gt;
+    <div class="clock-container">
+        <div class="digital-clock">
+            <span class="hours">00</span>
+            <span class="colon">:</span>
+            <span class="minutes">00</span>
+            <span class="colon">:</span>
+            <span class="seconds">00</span>
+            <span class="ampm">AM</span>
+        </div>
+        <div class="date-display">
+            <span class="day">Monday</span>,
+            <span class="month">January</span>
+            <span class="day-number">1</span>,
+            <span class="year">2023</span>
+        </div>
     </div>
-    
-    <h2>Paragraph (&lt;p&gt;)</h2>
-    The &lt;p&gt; tag is used to define a paragraph of text. <u>It automatically adds line breaks before and after the content.</u>
-    <div class="box">
-        This is a paragraph of text.
-    </div>
-    <h2>Hyperlinks(&lt;a href="URL"&gt)</h2>
-    <div class="box">
-        &lta href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
-    </div>
-    <a href="https://www.youtube.com/">https://www.youtube.com/</a>
-        <h2>Images(&lt;img src="images.jpg" alt="Description"&gt;)</h2>
-        The &lt;img&gt; tag is used to display images on a webpage.
-    <ul>
-        <li>The src attribute specifies the <u>image file path.</u></li>
-        <li>If the image cannot be loaded <u>due to an error(broken link, network issue),</u> the alt text will be displayed instead.</li>
-    </ul>
-    <div class="box">
-        &lt;img src="../images/pic.jpg" alt="Go up one level"&gt;
 
-    </div>
-    <img src="https://images.freeimages.com/slides/4f53a54c6e114a76a99b9df9573a8259.webp" alt="Go up one level"width:1px;height:1px;>
-    <br>
-    In HTML, file paths specify the <b><u>location of a file</u></b>(such as an image, stylesheet, or script). 
-    There are two main types of file paths:<b><u>absolute paths</u></b> and <b><u>relative paths.</u></b>
-    <br>
-    <br>
-    An <b><u>absolute path</u></b> specifies the <b><u>full URL</u></b> or <b><u>complete directory location</u></b> of a file. 
-    It includes the <b><u>protocol(http/https)</u></b> and the <b><u>domanin name.</u></b>
-    <div class="box">
-        &lt;img src="https//www.example.com/imgaes/photo.jpg" alt="Example Image"&gt;
-    </div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfs_RDSILti8UFcj1duSqtoBkQfDruYm5H8w&s" alt="Go up one level"width:1px;height:1px;><br>
-    <u>Use absolute paths when linking to external resources(like online images or stylesheets)
-    </u>
-    <br>
-    <br>
-    A <b><u>relative path</u></b> specifies the location of a file <b><u>relative to the current HTML document.</u></b> It does not include the full URL.
-    <div class="box">
-        &lt;img src="photo.jpg" alt"Image in the same folder"&gt;
-    </div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNojzmbfGMVu2PyVHpw5JljCgSf42l4wAxbQ&s" alt="Go up one level"width:1px;height:1px;><br>
-    <div class="box">
-        &lt;img src="images/photo.jpg" alt="Image inside a subfolder">
-    </div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBXIoHufJslrl_nnhF82U7wnmBQpVL_oMCVQ&s" alt="Go up one level"width:1px;height:1px;><br>
-    <b>./</b> refers to the current directory where the HTML file is located.
-    <br>
-    <br>
-    <b>../</b>moves one level up to the parent directory of the current file.
-    <br>
-    <br>
-    <u>Use relative paths for all internal files to ensure portability and better file management.</u>
-    <br>
-    <br>
-    <h2><b><u>Lists(&lt;ul&gt;, &lt;ol&gt; and &lt;li&gt;)</u></b></h2></body>
-    <br>
-    Lists help organize content into bullet points or numbered steps.
-    <ul>
-        <li>
-            <b><u>Unordered List(&lt;ul&gt;):</u></b> Displays <b><u>bulleted items.</u></b>
-        </li>
-        <li>
-            <b><u>Ordered List(&lt;ol&gt;):</u></b> Displays <b><u>numbered items.</u></b>
-        </li>
-    </ul>
-    The &lt;li&gt; tag defines an individual list item within an unordered (&lt;ul&gt;) or ordered (&lt;ol&gt;) list.
-    <div class="box">
-        &lt;ul&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
-        &lt;/ul&gt;
-        <br>
-        &lt;ol&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Step 1&lt;/li&gt;<br>
-        &nbsp;&nbsp;&lt;li&gt;Step 2&lt;/li&gt;<br>
-        &lt;/ol&gt;
-    </div>
-    In HTML, you can <b><u>nest formatting tags</u></b> like &lt;b&gt;(bold), &lt;i&gt;(italic), and &lt;u&gt;(underline) to <u>apply multiple styles to text.</u>
-    <div class="box">
-        &lt;p&gt;This is&lt;b&gt;&lt;i&gt;Bold and Italic&lt;/i&gt;&lt;/b&gt;
-    </div>
-    <u>In HTML5, the color property is used within the style attribute to define text.</u>
-    <p style="color:red;">Like this, a red text.</p>
-    Using a Color Name:
-    <div class="box">
-        &lt;p style="color:red;"&gt;Like this, a red text.&lt;/p&gt;
-    </div>
-    Using a Hexadecimal Color Code:
-    <div class="box">
-        &lt;p style="color:#ff0000;"&gt;Like this, a red text.&lt;/p&gt;
-    </div>
-    <h2><b>Tables(&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;)</b></h2>
-    An HTML table is used to display data in a strucutred format using rows and columns. It is created using &lt;table&gt; tag, with rows (&lt;tr&gt;) and cells (&lt;tr&gt;) and cells (&lt;td&gt; for data, &lt;th&gt;for headers).
-    <div class="box">
-        &lt;table border="1"&gt;<br>
-        &nbsp;&nbsp;&lt;tr&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Fruit&lt;/th&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Color&lt;/th&gt;<br>
-        &nbsp;&nbsp;&lt;/tr&gt;<br>
-        &nbsp;&nbsp;&lt;tr&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Apple&lt;/td&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Red&lt;/td&gt;<br>
-        &nbsp;&nbsp;&lt;/tr&gt;<br>
-        &nbsp;&nbsp;&lt;tr&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Banana&lt;/td&gt;<br>
-        &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Yellow&lt;/td&gt;<br>
-        &nbsp;&nbsp;&lt;/tr&gt;<br>
-        &lt;/table&gt;
-    </div>
-    <table border="1">
-        <tr>
-          <th>Fruit</th>
-          <th>Color</th>
-        </tr>
-        <tr>
-          <td>Apple</td>
-          <td>Red</td>
-        </tr>
-        <tr>
-          <td>Banana</td>
-          <td>Yellow</td>
-        </tr>
-      </table>
-      <div class="box">
-          &lt;table border="1"&gt;<br>
-          &nbsp;&nbsp;&lt;tr&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;th colspan="3"&gt;Fruit Table&lt;/th&gt;<br>
-          
-          &nbsp;&nbsp;&lt;/tr&gt;<br>
-          &nbsp;&nbsp;&lt;tr&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="2"&gt;Apple&lt;/td&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Banana&lt;/td&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Cherry&lt;/td&gt;<br>
-          &nbsp;&nbsp;&lt;/tr&gt;<br>
-          &nbsp;&nbsp;&lt;tr&gt;<br>
-          &nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;Mango&lt;/td&gt;<br>
-          &nbsp;&nbsp;&lt;/tr&gt;<br>
-          &lt;/table&gt;
-      </div>
-      <table border="1">
-        <tr>
-          <th colspan="3">Fruit Table</th>
-        </tr>
-        <tr>
-          <td rowspan="2">Apple</td>
-          <td>Banana</td>
-          <td>Cherry</td>
-        </tr>
-        <tr>
-          <td colspan="2">Mango</td>
-        </tr>
-      </table>
+    <script src="script.js"></script>
 </body>
 </html>
