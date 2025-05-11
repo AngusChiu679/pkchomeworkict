@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+}
+
+.clock-container {
+    text-align: center;
+}
+
+.digital-clock {
+    font-size: 5rem;
+    color: #00ff9d;
+    text-shadow: 0 0 10px #00ff9d, 0 0 20px #00ff9d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.colon {
+    margin: 0 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.date-display {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .digital-clock {
+        font-size: 3rem;
+    }
+    .date-display {
+        font-size: 1rem;
+    }
+}
